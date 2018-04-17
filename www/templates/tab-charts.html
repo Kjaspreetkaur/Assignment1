@@ -1,0 +1,23 @@
+<ion-view view-title="Charts">
+  <ion-content>
+    <ion-list>
+      <ion-item class="item-add-animate item-avatar item-icon-right" ng-repeat="chart in charts" type="item-text-wrap" href="#/tab/charts/{{chart.id}}">
+        <img ng-src="{{chart.face}}">
+        <h2>{{chart.name}}</h2>
+        <p>{{chart.lastText}}</p>
+        <i class="icon ion-chevron-right icon-accessory"></i>
+
+        <ion-option-button class="button-assertive" ng-click="add(chart)">
+          Add Item
+        </ion-option-button>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+  
+  <div class="card" id = "totaled">
+    <div class="container">
+      <h3><b>Calculated Calories:</b></h3> 
+      <p style="text-align:center;font-size:2.5em;">{{totalCallories}}</p> 
+    </div>
+  </div>
+</ion-view>
